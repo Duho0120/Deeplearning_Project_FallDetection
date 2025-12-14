@@ -106,9 +106,7 @@ class SkeletonExtractor:
         # 2. 신체 중심 계산
         center_x = np.mean(kp_reshaped[:, 0])
         center_y = np.mean(kp_reshaped[:, 1])
-        
-        # 3. 주요 신체 부위 간 각도 계산
-        # 예: 목-엉덩이-무릎 각도 등
+        features.extend([center_x, center_y])
         
         return np.array(features)
     

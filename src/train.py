@@ -36,6 +36,7 @@ def main(args):
         
         # 전처리된 데이터 저장
         if args.save_processed:
+            os.makedirs(os.path.dirname(args.processed_data_path), exist_ok=True)
             processor.save_processed_data(X, y, args.processed_data_path)
     
     if len(X) == 0:

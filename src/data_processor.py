@@ -76,11 +76,12 @@ class DataProcessor:
                             X.append(features)
                             y.append(label)
                     else:
-                        failed_images.append(str(image_path))
+                        print(f"키포인트 추출 실패: {image_path}")
+                        failed_images.append((str(image_path), "keypoint_extraction_failed"))
                         
                 except Exception as e:
                     print(f"오류 발생 ({image_path}): {e}")
-                    failed_images.append(str(image_path))
+                    failed_images.append((str(image_path), str(e)))
         
         X = np.array(X)
         y = np.array(y)
