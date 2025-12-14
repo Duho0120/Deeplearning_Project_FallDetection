@@ -53,18 +53,17 @@ venv.bak/
 *.pkl
 *.pickle
 
-# Data
+# Data directories (exclude large datasets)
 data/raw/
 data/processed/
-*.csv
-*.json
-*.xml
-*.jpg
-*.jpeg
-*.png
+
+# Large data files in any directory
 *.mp4
 *.avi
 *.mov
+*.mkv
+*.flv
+*.wmv
 
 # Keep data structure directories
 !data/.gitkeep
